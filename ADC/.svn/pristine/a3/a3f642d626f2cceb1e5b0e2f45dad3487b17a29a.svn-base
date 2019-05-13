@@ -1,0 +1,55 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[DebugChecksum]
+Checksum=-509337010
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[DataSample]
+LogEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[Breakpoints]
+Bp0=_ "STD_CODE" "{$PROJ_DIR$\..\IICUart}.408.3" 0 0 0 0 "" 0 ""
+Bp1=_ "STD_CODE" "{$PROJ_DIR$\..\IICUart}.409.1" 0 0 0 0 "" 0 ""
+Bp2=_ "STD_CODE" "{$PROJ_DIR$\..\IICUart}.1019.7" 0 0 0 0 "" 0 ""
+Bp3=_ "STD_CODE" "{$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_usart.c}.1014.7" 0 0 0 0 "" 0 ""
+Bp4=_ "STD_CODE" "{$PROJ_DIR$\USER\stm8l15x_it.c}.450.13" 0 0 0 0 "" 0 ""
+Bp5=_ "STD_CODE" "{$PROJ_DIR$\USER\stm8l15x_it.c}.450.13" 0 0 0 0 "" 0 ""
+Bp6=_ "STD_CODE" "{$PROJ_DIR$\USER\adc.c}.119.1" 0 0 0 0 "" 0 ""
+Bp7=_ "STD_CODE" "{$PROJ_DIR$\USER\adc.c}.119.1" 0 0 0 0 "" 0 ""
+Bp8=_ "STD_CODE" "{$PROJ_DIR$\USER\adc.c}.119.1" 0 0 0 0 "" 0 ""
+Bp9=_ "STD_CODE" "{$PROJ_DIR$\USER\adc.c}.119.1" 0 0 0 0 "" 0 ""
+Bp10=_ "STD_CODE" "{$PROJ_DIR$\USER\adc.c}.119.1" 0 0 0 0 "" 0 ""
+Bp11=_ "STD_CODE" "{$PROJ_DIR$\USER\adc.c}.119.3" 0 0 0 0 "" 0 ""
+Bp12=_ "STD_CODE" "{$PROJ_DIR$\USER\adc.c}.107.9" 0 0 0 0 "" 0 ""
+Bp13=_ "STD_CODE" "{$PROJ_DIR$\USER\adc.c}.98.9" 0 0 0 0 "" 0 ""
+Bp14=_ "STD_CODE" "{$PROJ_DIR$\USER\stm8l15x_it.c}.110.3" 1 0 0 0 "" 0 ""
+Bp15=_ "STD_CODE" "{$PROJ_DIR$\USER\adc.c}.104.9" 1 0 0 0 "" 0 ""
+Count=16
+[Aliases]
+A0=_ "E:\work\stm8IICUart\STM8S_StdPerph_Driver\src\stm8l15x_clk.c" ""
+A1=_ "E:\work\stm8IICUart\USER\IIC.c" ""
+A2=_ "E:\work\stm8IICUart\USER\Uart.c" ""
+A3=_ "E:\work\stm8IICUart\USER\main.c" ""
+A4=_ "E:\work\stm8IICUart\USER\stm8l15x_it.c" ""
+Count=5
+SuppressDialog=0
+[DebuggerSettings]
+DisableInterruptsWhenStepping=0

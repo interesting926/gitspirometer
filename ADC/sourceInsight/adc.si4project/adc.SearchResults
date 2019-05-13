@@ -1,0 +1,61 @@
+---- Buffer Matches (66 in 12 files) ----
+adc.c (E:\work\spirometer\ADC\USER) line 10 : int Buffer[BUFFER_SIZE]  = {0};
+adc.c (E:\work\spirometer\ADC\USER) line 15 : //u16 ADCValueBuffer[];
+DMA_Config in adc.c (E:\work\spirometer\ADC\USER) :   //BUFFER_SIZE
+DMA_Config in adc.c (E:\work\spirometer\ADC\USER) :   DMA_Init(DMA1_Channel0, BUFFER_ADDRESS,
+DMA_Config in adc.c (E:\work\spirometer\ADC\USER) :              BUFFER_SIZE,
+adc.h (E:\work\spirometer\ADC\USER) line 14 : #define BUFFER_SIZE            ((uint8_t) 200)
+adc.h (E:\work\spirometer\ADC\USER) line 15 : #define BUFFER_ADDRESS         ((uint16_t)(&Buffer))
+adc.h (E:\work\spirometer\ADC\USER) line 16 : extern int Buffer[BUFFER_SIZE];
+IIC.c (E:\work\spirometer\ADC\USER) line 7 : __IO uint8_t Slave_Buffer_Rx[255];
+IIC.h (E:\work\spirometer\ADC\USER) line 6 : __IO extern uint8_t Slave_Buffer_Rx[255];
+Calculate_Lung_Capacity in main.c (E:\work\spirometer\ADC\USER) :     int ADCBuf[BUFFER_SIZE]={0};
+Calculate_Lung_Capacity in main.c (E:\work\spirometer\ADC\USER) :     memcpy(ADCBuf,Buffer,BUFFER_SIZE);
+Calculate_Lung_Capacity in main.c (E:\work\spirometer\ADC\USER) :     for(i=0;i<BUFFER_SIZE;i++)
+stm8l15x.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 1183 : #define I2C_ITR_ITBUFEN     ((uint8_t)0x04) /*!< Buffer Interrupt Enable */
+stm8l15x.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 1226 : #define IRTIM_CR_HSEN   ((uint8_t)0x02) /*!< High sink open drain buffer enable Mask */
+stm8l15x.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 1698 : #define SPI_CR3_TXIE     ((uint8_t)0x80) /*!< Tx buffer empty interrupt enable mask */
+stm8l15x.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 1699 : #define SPI_CR3_RXIE     ((uint8_t)0x40) /*!< Rx buffer empty interrupt enable mask */
+stm8l15x.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 1702 : #define SPI_CR3_TXDMAEN  ((uint8_t)0x02) /*!< Tx Buffer DMA enable mask */
+stm8l15x.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 1703 : #define SPI_CR3_RXDMAEN  ((uint8_t)0x01) /*!< Rx Buffer DMA enable mask */
+stm8l15x.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 1710 : #define SPI_SR_TXE       ((uint8_t)0x02) /*!< Transmit buffer empty */
+stm8l15x.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 1711 : #define SPI_SR_RXNE      ((uint8_t)0x01) /*!< Receive buffer not empty */
+stm8l15x.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 2490 : #define DAC_CR1_BOFF          ((uint8_t)0x02) /*!<  DAC channel output buffer disable. */
+stm8l15x.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 2605 : #define  DMA_CCR_ARM        ((uint8_t)0x10)            /*!<Autorelaod mode Circular buffer mode */
+stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 27 :   *             addresses, the transfer Direction, the Buffer Size, the 
+stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 117 :   direction, buffer size, circular/normal mode selection, memory-to-memory mode 
+stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 197 :   * @param  DMA_BufferSize: Specifies the size of the DMA channelx Buffer.
+stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 206 :   *            @arg DMA_Mode_Normal: DMA normal buffer mode
+stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 207 :   *            @arg DMA_Mode_Circular: DMA circular buffer mode
+DMA_Init in stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) :               uint8_t DMA_BufferSize,
+DMA_Init in stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) :   assert_param(IS_DMA_BUFFER_SIZE(DMA_BufferSize));
+DMA_Init in stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) :   DMA_Channelx->CNBTR = (uint8_t)DMA_BufferSize;
+stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 365 :   This subsection provides functions allowing to configure and read the buffer 
+stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 375 :   Note: It is advised to use this function rather than DMA_Init() (DMA_BufferSize 
+stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 376 :         parameter) in situations where only the Data buffer needs to be reloaded.
+stm8l15x_dma.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 398 :   *         where only the Data buffer needs to be reloaded.  
+stm8l15x_dma.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 71 :   DMA_Mode_Normal = ((uint8_t)0x00),  /*!< DMA normal buffer mode*/
+stm8l15x_dma.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 72 :   DMA_Mode_Circular = ((uint8_t)0x10) /*!< DMA circular buffer mode */
+stm8l15x_dma.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 278 : /** @defgroup DMA_Buffer_Size
+stm8l15x_dma.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 281 : #define IS_DMA_BUFFER_SIZE(SIZE) ((SIZE) > (uint8_t)0x0)
+DMA_Init in stm8l15x_dma.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) :               uint8_t DMA_BufferSize,
+stm8l15x_i2c.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 947 :   *            @arg I2C_IT_BUF: Buffer interrupt mask
+stm8l15x_i2c.h (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc) line 221 :   I2C_IT_BUF             = (uint16_t)0x0004,   /*!< Buffer Interruption */
+INTERRUPT_HANDLER in stm8l15x_it.c (E:\work\spirometer\ADC\USER) :  // Voltage = (uint32_t)((uint32_t)Buffer[0] * //(uint32_t)ADC_RATIO) / 1000;
+INTERRUPT_HANDLER in stm8l15x_it.c (E:\work\spirometer\ADC\USER) :    //(uint32_t)((uint32_t)Buffer[1] * 1225) / 1000;
+INTERRUPT_HANDLER in stm8l15x_it.c (E:\work\spirometer\ADC\USER) :   //Verfin =  (uint32_t)1224*4096/Buffer[1];
+INTERRUPT_HANDLER in stm8l15x_it.c (E:\work\spirometer\ADC\USER) :      if(ADCCount == BUFFER_SIZE)
+INTERRUPT_HANDLER in stm8l15x_it.c (E:\work\spirometer\ADC\USER) :      Buffer[ADCCount++]= GetVotage_ADC();
+INTERRUPT_HANDLER in stm8l15x_it.c (E:\work\spirometer\ADC\USER) :        Slave_Buffer_Rx[Rx_Idx++] = temp;
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 361 :   the RX pin. In this mode, the USART_DR register is similar to a buffer (RDR) 
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 369 :   or USART_ReceiveData9() functions and returns the RDR buffered value. Whereas a write
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 371 : 	functions and stores the written data into TDR buffer.
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 860 :      1. USART_FLAG_TXE: to indicate the status of the transmit buffer register
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 861 :      2. USART_FLAG_RXNE: to indicate the status of the receive buffer register
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 881 :      1. USART_IT_TXE: to indicate the status of the transmit buffer register
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 882 :      2. USART_IT_RXNE: to indicate the status of the receive buffer register
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 887 : 											multibuffer communication error occur
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 891 :      1. USART_IT_TXE: specifies the interrupt source for the Tx buffer empty 
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 893 :      2. USART_IT_RXNE: specifies the interrupt source for the Rx buffer not 
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 914 :      1. USART_DMAReq_Tx: specifies the Tx buffer DMA transfer request
+stm8l15x_usart.c (E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src) line 915 :      2. USART_DMAReq_Rx: specifies the Rx buffer DMA transfer request
