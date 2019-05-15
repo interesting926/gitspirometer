@@ -93,38 +93,19 @@ u32 Calculate_Lung_Capacity(void)
 }
 
 
-void FLOAT_test(void)
-{
 
-    float a= 1.12345;
-    float b= 2.23456;
-
-    float c= a+b;
-
-    c= c-a;
-        
-
-}
-
-
-void HardWare_Init(void)
-{
-    sys_clock_init();
-    Init_USART1();
-
-    Init_ADC();
-    Timer2_Init(5);
-    //GetVotage_ADC();
-    //ShowVotage_ADC();
-    //DMA_Config();
-}
 
 void main(void)
 {
   uint8_t i=0;   
-  FLOAT_test();
-  HardWare_Init();
-
+  sys_clock_init();
+  Init_USART1();
+  
+  Init_ADC();
+  Timer2_Init(5);
+  //GetVotage_ADC();
+  //ShowVotage_ADC();
+  //DMA_Config();
 
 
   while(1)

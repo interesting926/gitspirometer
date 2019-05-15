@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "E:\work\spirometer\ADC\settings\STM8.Debug.general.xcl" --backend -f "E:\work\spirometer\ADC\settings\STM8.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "E:\work\gitspirometer\ADC\settings\STM8.Debug.general.xcl" --backend -f "E:\work\gitspirometer\ADC\settings\STM8.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "E:\work\spirometer\ADC\settings\STM8.Debug.general.xcl" "--debug_file=%~1" --backend -f "E:\work\spirometer\ADC\settings\STM8.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\common\bin\cspybat" -f "E:\work\gitspirometer\ADC\settings\STM8.Debug.general.xcl" "--debug_file=%~1" --backend -f "E:\work\gitspirometer\ADC\settings\STM8.Debug.driver.xcl" 
 
 @echo off 
 :end

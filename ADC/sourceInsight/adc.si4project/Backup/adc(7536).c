@@ -79,7 +79,7 @@ void Init_ADC(void)
     GPIO_Init(GPIOE,GPIO_Pin_5, GPIO_Mode_In_PU_No_IT);
 
     CLK_PeripheralClockConfig(CLK_Peripheral_ADC1,ENABLE);//开启ADC1时钟
-    //ADC_VrefintCmd(ENABLE); //使能内部参考电压
+    ADC_VrefintCmd(ENABLE); //使能内部参考电压
     ADC_DeInit(ADC1);
     ADC_Init(ADC1,ADC_ConversionMode_Continuous,ADC_Resolution_12Bit,ADC_Prescaler_1);//单次转换，12位，转换时钟1分频
     ADC_SamplingTimeConfig(ADC1, ADC_Group_SlowChannels, ADC_SamplingTime_384Cycles);

@@ -65,7 +65,7 @@ void sys_clock_init(void)
     F：PIPESIZE 圆管面积
     T：采样时间 ADC采集的频率是 200HZ 即1S采集200个数据
 */
-u32 Calculate_Lung_Capacity(void)
+int Calculate_Lung_Capacity(void)
 {
     int i;
     int ADCBuf[BUFFER_SIZE]={0};
@@ -82,7 +82,7 @@ u32 Calculate_Lung_Capacity(void)
         //计算气压,计算气压的公式可以了，后续累加还需要另外计算
         Capacity.airPressure =  ((((u32)9048*ADCBuf[i])/(PRECISION)) -(u32)1930)/PRECISION ;
         //计算单位时间内气体流量
-        Capacity.unitGasFlow = (PITOT * (u32)sqrt(((u32)2*Capacity.airPressure - (Capacity.airDensity/PRECISION)))*PIPESIZE/(PRECISION *PRECISION));        
+        Capacity.unitGasFlow = (PITOT * (u32)sqrt(((u32)2*Capacity.airPressure - (Capacity.airDensity/PRECISION)*PIPESIZE))/(PRECISION *PRECISION));        
         //将计算出来的值乘以时间
         Capacity.unitGasFlow =  (Capacity.unitGasFlow*(u32)5)/((u32)(1000));
         //累加气体流量
@@ -93,39 +93,21 @@ u32 Calculate_Lung_Capacity(void)
 }
 
 
-void FLOAT_test(void)
-{
 
-    float a= 1.12345;
-    float b= 2.23456;
-
-    float c= a+b;
-
-    c= c-a;
-        
-
-}
-
-
-void HardWare_Init(void)
-{
-    sys_clock_init();
-    Init_USART1();
-
-    Init_ADC();
-    Timer2_Init(5);
-    //GetVotage_ADC();
-    //ShowVotage_ADC();
-    //DMA_Config();
-}
 
 void main(void)
 {
   uint8_t i=0;   
-  FLOAT_test();
-  HardWare_Init();
+  sys_clock_init();
+  Init_USART1();
+  
+  Init_ADC();
+  //Timer2_Init(5);
+  //GetVotage_ADC();
+  ShowVotage_ADC();
+  //DMA_Config();
 
-
+  //test();
 
   while(1)
   {

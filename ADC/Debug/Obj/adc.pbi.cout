@@ -1,26 +1,26 @@
-"E:\work\spirometer\ADC\USER\adc.c"
+"E:\work\gitspirometer\ADC\USER\adc.c"
 -std=c99
 -ferror-limit=100
 -I
-E:\work\spirometer\ADC\USER
+E:\work\gitspirometer\ADC\USER
 -I
-E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc
+E:\work\gitspirometer\ADC\STM8S_StdPerph_Driver\inc
 -I
-E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src
+E:\work\gitspirometer\ADC\STM8S_StdPerph_Driver\src
 -I
-E:\work\spirometer\ADC
+E:\work\gitspirometer\ADC
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.3\stm8\inc\c
 -I
-E:\work\spirometer\ADC\USER
+E:\work\gitspirometer\ADC\USER
 -I
-E:\work\spirometer\ADC\STM8S_StdPerph_Driver\inc
+E:\work\gitspirometer\ADC\STM8S_StdPerph_Driver\inc
 -I
-E:\work\spirometer\ADC\STM8S_StdPerph_Driver\src
+E:\work\gitspirometer\ADC\STM8S_StdPerph_Driver\src
 -I
-E:\work\spirometer\ADC
+E:\work\gitspirometer\ADC
 -DSTM8L15X_MD=1
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
