@@ -11,7 +11,7 @@
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
 #define ADC1_DR_ADDRESS        ((uint16_t)0x5344)
-#define BUFFER_SIZE            ((uint8_t) 200)
+#define BUFFER_SIZE            ((uint16_t) 200)
 #define BUFFER_ADDRESS         ((uint16_t)(&ADCBuffer))
 extern int ADCBuffer[BUFFER_SIZE];
 extern uint8_t ADCCount;

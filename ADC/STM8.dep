@@ -6,103 +6,34 @@
   <configuration>
     <name>Debug</name>
     <outputs>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_wwdg.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\STM8.hex</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_clk.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\Uart.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_clk.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_gpio.o</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_i2c.h</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_irtim.h</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_flash.h</file>
-      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_pwr.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_usart.__cstat.et</file>
-      <file>$PROJ_DIR$\USER\stm8l15x_it.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\tim2.o</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_clk.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_tim2.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_adc.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_tim2.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_dma.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_dma.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_tim3.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\Uart.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_adc.pbi</file>
-      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_iwdg.h</file>
-      <file>$PROJ_DIR$\Debug\Exe\STM8.out</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_beep.h</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_lcd.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_it.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_syscfg.__cstat.et</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_tim1.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_adc.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\tim2.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\IIC.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_i2c.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\IIC.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\STM8.pbd</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_wfe.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_it.__cstat.et</file>
-      <file>$TOOLKIT_DIR$\config\lnkstm8l151c8.icf</file>
-      <file>$PROJ_DIR$\USER\stm8l15x_conf.h</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_aes.h</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_itc.h</file>
-      <file>$PROJ_DIR$\USER\adc.h</file>
-      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_rst.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\com.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_i2c.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\adc.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_dma.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_tim2.__cstat.et</file>
-      <file>$PROJ_DIR$\Debug\Obj\adc.pbi</file>
-      <file>$PROJ_DIR$\Debug\List\STM8.map</file>
-      <file>$PROJ_DIR$\Debug\Obj\Uart.pbi</file>
-      <file>$PROJ_DIR$\USER\Uart.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_syscfg.o</file>
-      <file>$PROJ_DIR$\..\..\spirometer\ADC\USER\adc.c</file>
       <file>$PROJ_DIR$\Readme\readme.txt</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_adc.c</file>
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_clk.c</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_adc.c</file>
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_dma.c</file>
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_gpio.c</file>
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_i2c.c</file>
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_syscfg.c</file>
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_tim2.c</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_usart.c</file>
-      <file>$PROJ_DIR$\USER\adc.c</file>
-      <file>$PROJ_DIR$\USER\com.c</file>
-      <file>$PROJ_DIR$\USER\IIC.c</file>
-      <file>$PROJ_DIR$\USER\main.c</file>
-      <file>$PROJ_DIR$\USER\stm8l15x_it.c</file>
-      <file>$PROJ_DIR$\USER\tim2.c</file>
-      <file>$PROJ_DIR$\USER\Uart.c</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_syscfg.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_it.o</file>
-      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-      <file>$PROJ_DIR$\USER\tim2.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_dac.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_gpio.__cstat.et</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_tim5.h</file>
+      <file>$PROJ_DIR$\USER\main.h</file>
+      <file>$PROJ_DIR$\USER\com.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\com.o</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x.h</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_spi.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\STM8.out</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_beep.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_tim2.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\tim2.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_adc.o</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_tim1.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_syscfg.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_it.pbi</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_lcd.h</file>
       <file>$PROJ_DIR$\Debug\Obj\adc.__cstat.et</file>
       <file>$PROJ_DIR$\Debug\Obj\stm8l15x_i2c.o</file>
       <file>$PROJ_DIR$\Debug\Obj\stm8l15x_syscfg.pbi</file>
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_tim2.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_gpio.__cstat.et</file>
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_adc.h</file>
       <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
       <file>$PROJ_DIR$\Debug\Obj\stm8l15x_clk.pbi</file>
@@ -116,43 +47,119 @@
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_dma.h</file>
       <file>$PROJ_DIR$\Debug\Obj\stm8l15x_gpio.pbi</file>
       <file>$TOOLKIT_DIR$\lib\dlstm8smf.h</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_wwdg.h</file>
+      <file>$PROJ_DIR$\Debug\Exe\STM8.hex</file>
+      <file>$PROJ_DIR$\Debug\Obj\Uart.__cstat.et</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_irtim.h</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_i2c.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_gpio.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_clk.o</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_flash.h</file>
+      <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_pwr.h</file>
+      <file>$PROJ_DIR$\USER\stm8l15x_it.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_clk.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_syscfg.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_usart.__cstat.et</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_syscfg.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_it.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\tim2.o</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_tim5.h</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_dac.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\USER\tim2.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_usart.c</file>
+      <file>$PROJ_DIR$\USER\adc.c</file>
+      <file>$PROJ_DIR$\USER\com.c</file>
+      <file>$PROJ_DIR$\USER\IIC.c</file>
+      <file>$PROJ_DIR$\USER\main.c</file>
+      <file>$PROJ_DIR$\USER\stm8l15x_it.c</file>
+      <file>$PROJ_DIR$\USER\tim2.c</file>
+      <file>$PROJ_DIR$\USER\Uart.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\IIC.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\IIC.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_i2c.pbi</file>
+      <file>$PROJ_DIR$\USER\stm8l15x_conf.h</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_itc.h</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_aes.h</file>
+      <file>$TOOLKIT_DIR$\config\lnkstm8l151c8.icf</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_wfe.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\STM8.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\IIC.o</file>
+      <file>$PROJ_DIR$\USER\adc.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_it.__cstat.et</file>
+      <file>$TOOLKIT_DIR$\inc\c\math.h</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_rst.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\com.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\adc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\adc.pbi</file>
+      <file>$PROJ_DIR$\Debug\List\STM8.map</file>
+      <file>$PROJ_DIR$\Debug\Obj\Uart.pbi</file>
+      <file>$PROJ_DIR$\USER\Uart.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_i2c.__cstat.et</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_iwdg.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_dma.__cstat.et</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_clk.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_tim2.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_tim2.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_dma.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_dma.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_tim3.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_adc.__cstat.et</file>
+      <file>$PROJ_DIR$\Debug\Obj\Uart.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\stm8l15x_adc.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ymath.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xtgmath.h</file>
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_rtc.h</file>
       <file>$PROJ_DIR$\Debug\Obj\tim2.pbi</file>
       <file>$PROJ_DIR$\Debug\Obj\com.pbi</file>
-      <file>$PROJ_DIR$\Debug\Obj\com.o</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x.h</file>
-      <file>$PROJ_DIR$\USER\com.h</file>
-      <file>$PROJ_DIR$\USER\main.h</file>
       <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_gpio.h</file>
       <file>$PROJ_DIR$\Debug\Obj\stm8l15x_usart.o</file>
-      <file>$PROJ_DIR$\STM8S_StdPerph_Driver\inc\stm8l15x_spi.h</file>
-      <file>$PROJ_DIR$\Debug\Obj\IIC.__cstat.et</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 35 63</file>
+          <file> 13 93</file>
         </tool>
       </outputs>
     </file>
     <file>
-      <name>$PROJ_DIR$\Debug\Exe\STM8.out</name>
+      <name>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_clk.c</name>
       <outputs>
         <tool>
-          <name>ILINK</name>
-          <file> 63</file>
+          <name>BICOMP</name>
+          <file> 30</file>
         </tool>
         <tool>
-          <name>OBJCOPY</name>
-          <file> 1</file>
+          <name>ICCSTM8</name>
+          <file> 47</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 52</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
-          <name>ILINK</name>
-          <file> 50 59 113 46 90 41 4 23 5 94 85 66 22 118 17 27 101 9</file>
+          <name>BICOMP</name>
+          <file> 106 38 67 22 11 14 45 12 83 28 33 48 80 89 19 63 79 81 99 64 31 118 44 97 50 115 59 26 36 34 41</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 99 11 79 28 81 14 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 59 19 26 106 36 63 34 83 41 67</file>
         </tool>
       </inputs>
     </file>
@@ -161,52 +168,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 29</file>
+          <file> 110</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 41</file>
+          <file> 18</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 21</file>
+          <file> 107</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 114 10 100 105 18 7 84 0 51 52 89 117 34 110 96 103 86 97 36 102 107 8 6 53 37 56 119 40 26 92 48</file>
+          <file> 11 50 31 36 99 44 59 41 79 81 64 118 97 115 26 34 67 28 14 33 38 48 45 80 22 89 12 19 106 63 83</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 97 114 51 52 36 18 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 84 40 96 26 105 92 103 48 0 86</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_clk.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 99</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 4</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 2</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 26 107 86 37 114 36 6 119 48 97 102 8 53 56 40 92 51 52 18 89 100 117 7 34 10 110 84 96 105 103 0</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 18 114 51 97 52 36 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 84 40 96 26 105 92 103 48 0 86</file>
+          <file> 28 11 79 81 14 99 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 59 19 26 106 36 63 34 83 41 67</file>
         </tool>
       </inputs>
     </file>
@@ -215,25 +195,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 24</file>
+          <file> 104</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 23</file>
+          <file> 103</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 60</file>
+          <file> 98</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 97 56 114 8 92 102 53 40 86 36 107 6 37 119 26 48 51 52 18 89 100 117 7 34 10 110 84 96 105 103 0</file>
+          <file> 28 89 11 48 63 33 80 19 67 14 38 45 22 12 106 83 79 81 99 64 31 118 44 97 50 115 59 26 36 34 41</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 107 114 51 97 52 36 18 102 89 100 8 117 6 7 53 34 37 10 56 110 119 84 40 96 26 105 92 103 48 0 86</file>
+          <file> 38 11 79 28 81 14 99 33 64 31 48 118 45 44 80 97 22 50 89 115 12 59 19 26 106 36 63 34 83 41 67</file>
         </tool>
       </inputs>
     </file>
@@ -242,25 +222,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 108</file>
+          <file> 39</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 5</file>
+          <file> 46</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 91</file>
+          <file> 27</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 114 52 110 117 103 51 89 34 96 18 100 7 10 84 105 0 86 97 36 102 107 8 6 53 37 56 119 40 26 92 48</file>
+          <file> 11 81 115 118 34 79 64 97 26 99 31 44 50 59 36 41 67 28 14 33 38 48 45 80 22 89 12 19 106 63 83</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 117 114 51 97 52 36 18 102 89 107 100 8 6 7 53 34 37 10 56 110 119 84 40 96 26 105 92 103 48 0 86</file>
+          <file> 118 11 79 28 81 14 99 33 64 38 31 48 45 44 80 97 22 50 89 115 12 59 19 26 106 36 63 34 83 41 67</file>
         </tool>
       </inputs>
     </file>
@@ -269,11 +249,111 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 45</file>
+          <file> 78</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 94</file>
+          <file> 24</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 96</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 89 28 48 63 33 80 19 11 67 14 38 45 22 12 106 83 99 79 81 64 31 118 44 97 50 115 59 26 36 34 41</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 45 11 79 28 81 14 99 33 64 38 31 48 118 44 80 97 22 50 89 115 12 59 19 26 106 36 63 34 83 41 67</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_syscfg.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 57</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 20</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 115 81 11 118 34 79 64 97 26 99 31 44 50 59 36 41 67 28 14 33 38 48 45 80 22 89 12 19 106 63 83</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 59 11 79 28 81 14 99 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 19 26 106 36 63 34 83 41 67</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_tim2.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 101</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 102</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
+          <file> 15</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12 11 14 45 83 67 38 22 106 28 33 48 80 89 19 63 79 81 99 64 31 118 44 97 50 115 59 26 36 34 41</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 26 11 79 28 81 14 99 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 59 19 106 36 63 34 83 41 67</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\STM8.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 93</file>
+        </tool>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 42</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 82 91 10 85 61 18 47 103 46 24 60 57 102 119 62 108 32 49</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_usart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 35</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 119</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -283,92 +363,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 56 97 8 92 102 53 40 114 86 36 107 6 37 119 26 48 18 51 52 89 100 117 7 34 10 110 84 96 105 103 0</file>
+          <file> 50 11 31 36 99 44 59 41 79 81 64 118 97 115 26 34 67 28 14 33 38 48 45 80 22 89 12 19 106 63 83</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 6 114 51 97 52 36 18 102 89 107 100 8 117 7 53 34 37 10 56 110 119 84 40 96 26 105 92 103 48 0 86</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_syscfg.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 95</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 66</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 39</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 110 52 114 117 103 51 89 34 96 18 100 7 10 84 105 0 86 97 36 102 107 8 6 53 37 56 119 40 26 92 48</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 84 114 51 97 52 36 18 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 40 96 26 105 92 103 48 0 86</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_tim2.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 20</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 22</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 61</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 119 114 36 6 48 86 107 37 26 97 102 8 53 56 40 92 51 52 18 89 100 117 7 34 10 110 84 96 105 103 0</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 96 114 51 97 52 36 18 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 84 40 26 105 92 103 48 0 86</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\STM8S_StdPerph_Driver\src\stm8l15x_usart.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 104</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 118</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 11</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 10 114 100 105 18 7 84 0 51 52 89 117 34 110 96 103 86 97 36 102 107 8 6 53 37 56 119 40 26 92 48</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 103 114 51 97 52 36 18 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 84 40 96 26 105 92 48 0 86</file>
+          <file> 34 11 79 28 81 14 99 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 59 19 26 106 36 63 83 41 67</file>
         </tool>
       </inputs>
     </file>
@@ -377,25 +376,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 62</file>
+          <file> 92</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 59</file>
+          <file> 91</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 93</file>
+          <file> 23</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 26 114 107 109 14 86 37 115 28 36 6 119 48 97 65 15 98 102 8 53 56 40 92 84 54 13 42 16 30 51 52 18 89 100 117 7 34 10 110 96 105 103 0 31</file>
+          <file> 106 11 38 40 54 67 22 9 109 14 45 12 83 28 95 55 29 33 48 80 89 19 63 59 86 53 16 56 111 79 81 99 64 31 118 44 97 50 115 26 36 34 41 112</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 31 13 14 15 109 98 16 30 42 28 84 114 51 97 52 36 18 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 40 96 26 105 92 103 48 0 86 115 54 65</file>
+          <file> 112 53 54 55 40 29 56 111 16 109 59 11 79 28 81 14 99 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 19 26 106 36 63 34 83 41 67 9 86 95</file>
         </tool>
       </inputs>
     </file>
@@ -404,25 +403,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 112</file>
+          <file> 117</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 113</file>
+          <file> 10</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 57</file>
+          <file> 90</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 115</file>
+          <file> 9</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 115</file>
+          <file> 9</file>
         </tool>
       </inputs>
     </file>
@@ -431,25 +430,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 44</file>
+          <file> 77</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 46</file>
+          <file> 85</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 120</file>
+          <file> 76</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 34 114 51 89 96 52 117 110 103 6 18 100 7 10 84 105 0 86 97 36 102 107 8 53 37 56 119 40 26 92 48 106</file>
+          <file> 97 11 79 64 26 81 118 115 34 45 99 31 44 50 59 36 41 67 28 14 33 38 48 80 22 89 12 19 106 63 83 37</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 106 114 51 97 52 36 18 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 84 40 96 26 105 92 103 48 0 86</file>
+          <file> 37 11 79 28 81 14 99 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 59 19 26 106 36 63 34 83 41 67</file>
         </tool>
       </inputs>
     </file>
@@ -458,25 +457,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 88</file>
+          <file> 65</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 90</file>
+          <file> 61</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 25</file>
+          <file> 105</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 0 7 55 109 14 18 84 65 28 13 114 100 10 105 54 15 98 51 52 89 117 34 110 96 103 19 116 106 87 42 16 30 86 97 36 102 107 8 6 53 37 56 119 40 26 92 48 32 31 33</file>
+          <file> 41 44 88 40 54 99 59 95 109 53 11 31 50 36 86 55 29 79 81 64 118 97 115 26 34 100 8 37 66 16 56 111 67 28 14 33 38 48 45 80 22 89 12 19 106 63 83 113 112 114</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 31 13 14 15 109 98 16 30 42 28 19 114 51 97 52 36 18 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 84 40 96 26 105 92 103 48 0 86 116 65 106 54 87 55 32 33</file>
+          <file> 112 53 54 55 40 29 56 111 16 109 100 11 79 28 81 14 99 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 59 19 26 106 36 63 34 83 41 67 8 95 37 86 66 88 113 114</file>
         </tool>
       </inputs>
     </file>
@@ -485,25 +484,25 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 38</file>
+          <file> 21</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 85</file>
+          <file> 60</file>
         </tool>
         <tool>
           <name>__cstat</name>
-          <file> 49</file>
+          <file> 87</file>
         </tool>
       </outputs>
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 48 42 114 6 36 119 65 13 86 107 37 26 19 54 16 30 14 97 102 8 53 56 40 92 18 12 116 106 28 15 109 98 51 52 89 100 117 7 34 10 110 84 96 105 103 0 31</file>
+          <file> 83 16 45 11 14 12 54 95 53 67 38 22 106 100 86 56 111 28 33 48 80 89 19 63 51 8 37 109 55 40 29 79 81 99 64 31 118 44 97 50 115 59 26 36 34 41 112</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 31 13 14 15 109 98 16 30 42 28 12 114 51 97 52 36 18 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 84 40 96 26 105 92 103 48 0 86 19 116 65 106 54</file>
+          <file> 112 53 54 55 40 29 56 111 16 109 51 11 79 28 81 14 99 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 59 19 26 106 36 63 34 83 41 67 100 8 95 37 86</file>
         </tool>
       </inputs>
     </file>
@@ -512,11 +511,38 @@
       <outputs>
         <tool>
           <name>BICOMP</name>
-          <file> 111</file>
+          <file> 116</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
+          <file> 62</file>
+        </tool>
+        <tool>
+          <name>__cstat</name>
           <file> 17</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11 31 36 50 99 44 59 41 79 81 64 118 97 115 26 34 66 67 28 14 33 38 48 45 80 22 89 12 19 106 63 83</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 26 11 79 28 81 14 99 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 59 19 106 36 63 34 83 41 67 66</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\USER\Uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 94</file>
+        </tool>
+        <tool>
+          <name>ICCSTM8</name>
+          <file> 108</file>
         </tool>
         <tool>
           <name>__cstat</name>
@@ -526,38 +552,11 @@
       <inputs>
         <tool>
           <name>BICOMP</name>
-          <file> 114 100 105 10 18 7 84 0 51 52 89 117 34 110 96 103 87 86 97 36 102 107 8 6 53 37 56 119 40 26 92 48</file>
+          <file> 38 11 55 106 67 22 54 29 14 45 12 83 95 109 40 28 33 48 80 89 19 63 59 53 16 56 111 79 81 99 64 31 118 44 97 50 115 26 36 34 41 112</file>
         </tool>
         <tool>
           <name>ICCSTM8</name>
-          <file> 96 114 51 97 52 36 18 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 84 40 26 105 92 103 48 0 86 87</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
-      <name>$PROJ_DIR$\USER\Uart.c</name>
-      <outputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 64</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 27</file>
-        </tool>
-        <tool>
-          <name>__cstat</name>
-          <file> 3</file>
-        </tool>
-      </outputs>
-      <inputs>
-        <tool>
-          <name>BICOMP</name>
-          <file> 100 114 13 105 10 42 18 7 84 0 65 16 30 51 52 89 117 34 110 96 103 14 28 15 109 98 86 97 36 102 107 8 6 53 37 56 119 40 26 92 48 31</file>
-        </tool>
-        <tool>
-          <name>ICCSTM8</name>
-          <file> 31 13 14 15 109 98 16 30 42 28 114 51 97 52 36 18 102 89 107 100 8 117 6 7 53 34 37 10 56 110 119 84 40 96 26 105 92 103 48 0 86 65</file>
+          <file> 112 53 54 55 40 29 56 111 16 109 11 79 28 81 14 99 33 64 38 31 48 118 45 44 80 97 22 50 89 115 12 59 19 26 106 36 63 34 83 41 67 95</file>
         </tool>
       </inputs>
     </file>

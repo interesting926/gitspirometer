@@ -41,7 +41,6 @@ void Init_USART1(void)
   USART_Cmd(USART1, ENABLE);
 
   enableInterrupts();
-  disableInterrupts();
 }
 
 

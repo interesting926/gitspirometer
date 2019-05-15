@@ -40,14 +40,6 @@
 #define LED_GPIO_PINS  (GPIO_PIN_5)
 
 
-//上一秒肺活量是否为零标志
-int capacitySecondFlag=0;
-//当前一秒肺活量
-float capacitySecond=0;
-//总的肺活量
-float capacitySeconds=0;
-
-
 
 /* 初始化系统时钟 */
 void sys_clock_init(void)
@@ -73,7 +65,7 @@ void sys_clock_init(void)
     F：PIPESIZE 圆管面积
     T：采样时间 ADC采集的频率是 200HZ 即1S采集200个数据
 */
-float Calculate_LungCapacity_Second(void)
+float Calculate_Lung_Capacity(void)
 {
     int i;
     int ADCBuf[BUFFER_SIZE]={0};
@@ -100,38 +92,7 @@ float Calculate_LungCapacity_Second(void)
 }
 
 
-void Calculate_LungCapacity_Seconds(void)
-{
-
-
-
-    capacitySecond = Calculate_LungCapacity_Second();
-    //这一秒和上一秒都是0
-    if((capacitySecond == 0)&&(capacitySecondFlag == 0))
-    {
-        capacitySeconds=0;
-        
-    }
-    //这一秒是0 上一秒不是0
-    else if((capacitySecond == 0)&&(capacitySecondFlag != 0))
-    {
-        capacitySeconds =0;
-        //当前秒不等于0 ，标志为1
-        capacitySecondFlag=0;
-
-    }
-    //当前秒不为0
-    if(capacitySecond != 0)
-    {
-        capacitySeconds += capacitySecond;
-        //当前秒不等于0 ，标志为1
-        capacitySecondFlag=1;
-
-    }
-
-
-
-}
+void 
 
 
 void HardWare_Init(void)
@@ -144,7 +105,8 @@ void HardWare_Init(void)
 }
 
 void main(void)
-{   
+{
+  uint8_t i=0;   
   HardWare_Init();
 
 
@@ -152,9 +114,22 @@ void main(void)
   while(1)
   {
 
+    if(UartRlen)
+    {
+        for(i=0;i<UartRlen;i++)
+        {
+            Uart1_Send(UartRbuf[i]);
+        }
+        UartRlen =0;
+    }
+    if(IICOverFlag)
+    {
+        IICOverFlag=0;        
+    }
+
     if(ADCOverFlag)
     {
-        Calculate_LungCapacity_Seconds();
+        Calculate_Lung_Capacity();
         ADCOverFlag=0;    
     }
 

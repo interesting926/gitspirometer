@@ -40,14 +40,6 @@
 #define LED_GPIO_PINS  (GPIO_PIN_5)
 
 
-//上一秒肺活量是否为零标志
-int capacitySecondFlag=0;
-//当前一秒肺活量
-float capacitySecond=0;
-//总的肺活量
-float capacitySeconds=0;
-
-
 
 /* 初始化系统时钟 */
 void sys_clock_init(void)
@@ -73,63 +65,44 @@ void sys_clock_init(void)
     F：PIPESIZE 圆管面积
     T：采样时间 ADC采集的频率是 200HZ 即1S采集200个数据
 */
-float Calculate_LungCapacity_Second(void)
+u32 Calculate_Lung_Capacity(void)
 {
     int i;
     int ADCBuf[BUFFER_SIZE]={0};
+    //
     spirometer  Capacity={0,AIRDENSITY, PIPESIZE,PITOT,0};
-    disableInterrupts();
+
+
     //先把ADC的数据保存起来
     memcpy(ADCBuf,ADCBuffer,BUFFER_SIZE);
     for(i=0;i<BUFFER_SIZE;i++)
     { 
-
-   
-        //计算气压,
-        Capacity.airPressure =  (((float)coefficientA*ADCBuffer[i]/100.00) -(float)coefficientB);
+      
+        //气压= 
+        //计算气压,计算气压的公式可以了，后续累加还需要另外计算
+        Capacity.airPressure =  ((((u32)9048*ADCBuf[i])/(PRECISION)) -(u32)1930)/PRECISION ;
         //计算单位时间内气体流量
-        Capacity.unitGasFlow = (PITOT * (float)sqrt(2*Capacity.airPressure - (Capacity.airDensity))*PIPESIZE);        
+        Capacity.unitGasFlow = (PITOT * (u32)sqrt(((u32)2*Capacity.airPressure - (Capacity.airDensity/PRECISION)))*PIPESIZE/(PRECISION *PRECISION));        
         //将计算出来的值乘以时间
         Capacity.unitGasFlow =  (Capacity.unitGasFlow*(u32)5)/((u32)(1000));
         //累加气体流量
         Capacity.lungCapacity += Capacity.unitGasFlow;
-    }  
-    enableInterrupts();
+    }    
     return Capacity.lungCapacity;
  
 }
 
 
-void Calculate_LungCapacity_Seconds(void)
+void FLOAT_test(void)
 {
 
+    float a= 1.12345;
+    float b= 2.23456;
 
+    float c= a+b;
 
-    capacitySecond = Calculate_LungCapacity_Second();
-    //这一秒和上一秒都是0
-    if((capacitySecond == 0)&&(capacitySecondFlag == 0))
-    {
-        capacitySeconds=0;
+    c= c-a;
         
-    }
-    //这一秒是0 上一秒不是0
-    else if((capacitySecond == 0)&&(capacitySecondFlag != 0))
-    {
-        capacitySeconds =0;
-        //当前秒不等于0 ，标志为1
-        capacitySecondFlag=0;
-
-    }
-    //当前秒不为0
-    if(capacitySecond != 0)
-    {
-        capacitySeconds += capacitySecond;
-        //当前秒不等于0 ，标志为1
-        capacitySecondFlag=1;
-
-    }
-
-
 
 }
 
@@ -138,13 +111,18 @@ void HardWare_Init(void)
 {
     sys_clock_init();
     Init_USART1();
-    enableInterrupts();
+
     Init_ADC();
     Timer2_Init(5);
+    //GetVotage_ADC();
+    //ShowVotage_ADC();
+    //DMA_Config();
 }
 
 void main(void)
-{   
+{
+  uint8_t i=0;   
+  FLOAT_test();
   HardWare_Init();
 
 
@@ -152,9 +130,22 @@ void main(void)
   while(1)
   {
 
+    if(UartRlen)
+    {
+        for(i=0;i<UartRlen;i++)
+        {
+            Uart1_Send(UartRbuf[i]);
+        }
+        UartRlen =0;
+    }
+    if(IICOverFlag)
+    {
+        IICOverFlag=0;        
+    }
+
     if(ADCOverFlag)
     {
-        Calculate_LungCapacity_Seconds();
+        Calculate_Lung_Capacity();
         ADCOverFlag=0;    
     }
 
