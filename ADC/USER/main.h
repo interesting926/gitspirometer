@@ -35,8 +35,6 @@ typedef struct
    float airPressure;
    //单位时间内气体流量
    float unitGasFlow;
-   
-
 }spirometer;
 
 #endif /* __MAIN_H*/
