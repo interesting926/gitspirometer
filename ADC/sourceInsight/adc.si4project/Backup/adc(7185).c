@@ -2,7 +2,6 @@
 #include "stm8l15x_syscfg.h"
 #include "stm8l15x_adc.h"
 #include "stm8l15x_dma.h"
-#include "main.h"
 #include "com.h"
 #include "adc.h"
 #include "uart.h"
@@ -135,7 +134,7 @@ int GetVotage_ADC(void)
     adc1_value = GetValue_ADC(20);
     //将ADC采集到的电压装换成实际电压
     Fvalue=(float)adc1_value*(3.2/4096);
-    Ivalue = (int)(Fvalue * PRECISION );
+    Ivalue = (int)(Fvalue * 100.00);
     return Ivalue;   
 }
 

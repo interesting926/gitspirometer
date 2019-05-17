@@ -18,7 +18,7 @@
 //测试时使用的皮管面积为30.19 mm*mm
 #define PIPESIZE 30.19
 //皮托管系数暂定是1.0，后续需要测试更改
-#define PITOT 2.093577
+#define PITOT 1
 
 
 typedef struct

@@ -83,11 +83,7 @@ float Calculate_LungCapacity_Second(void)
         //计算气压,
         Capacity.airPressure =  (((float)coefficientA*ADCBuffer[i]/PRECISION ) -(float)coefficientB);
         //在标准气压下算出来的可能是负数
-        if(Capacity.airPressure <0.7) 
-        {
-            Capacity.airPressure=0;
-            continue;
-        }
+        if(Capacity.airPressure <0) Capacity.airPressure=0;
     
         //计算单位时间内气体流量
         Capacity.unitGasFlow = (PITOT * (float)sqrt(2*Capacity.airPressure - (Capacity.airDensity))*PIPESIZE);        
@@ -136,7 +132,7 @@ void Calculate_LungCapacity_Seconds(void)
 
     }
     temp = (u32) capacitySeconds*100;
-    printf("%lu.%lu ml\n",temp/100,temp%100);
+    printf("%lu.%lu pa\n",temp/100,temp%100);
 
 }
 

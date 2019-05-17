@@ -23,15 +23,21 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stdio.h"
 #include "string.h"
-#include "math.h"
 #include "stm8l15x.h"
 #include "main.h"
 #include "Uart.h"
 #include "IIC.h"
 #include "adc.h"
 #include "tim2.h"
+#include "math.h"
 
 
+
+/* Private defines -----------------------------------------------------------*/
+/* Private function prototypes -----------------------------------------------*/
+/* Private functions ---------------------------------------------------------*/
+#define LED_GPIO_PORT  (GPIOB)
+#define LED_GPIO_PINS  (GPIO_PIN_5)
 
 
 //上一秒肺活量是否为零标志
@@ -56,7 +62,6 @@ void sys_clock_init(void)
 }
 
 /*
-    计算一秒钟肺活量
     计算肺活量
     电压和气压公式:       p=90.48V-19.3
     肺活量的计算公式：Q =  K √(2P-ρ) *F*T
@@ -79,38 +84,26 @@ float Calculate_LungCapacity_Second(void)
     for(i=0;i<BUFFER_SIZE;i++)
     { 
 
-       
+   
         //计算气压,
-        Capacity.airPressure =  (((float)coefficientA*ADCBuffer[i]/PRECISION ) -(float)coefficientB);
-        //在标准气压下算出来的可能是负数
-        if(Capacity.airPressure <0.7) 
-        {
-            Capacity.airPressure=0;
-            continue;
-        }
-    
+        Capacity.airPressure =  (((float)coefficientA*ADCBuffer[i]/100.00) -(float)coefficientB);
         //计算单位时间内气体流量
         Capacity.unitGasFlow = (PITOT * (float)sqrt(2*Capacity.airPressure - (Capacity.airDensity))*PIPESIZE);        
         //将计算出来的值乘以时间
-        Capacity.unitGasFlow =  (Capacity.unitGasFlow*(u32)samplingTime)/((u32)(unitTime));
+        Capacity.unitGasFlow =  (Capacity.unitGasFlow*(u32)5)/((u32)(1000));
         //累加气体流量
         Capacity.lungCapacity += Capacity.unitGasFlow;
     }  
-    if(Capacity.lungCapacity <= lungThreshold) Capacity.lungCapacity=0;
     enableInterrupts();
     return Capacity.lungCapacity;
  
 }
 
 
-/*  
-    计算多秒肺活量
-
-*/
 void Calculate_LungCapacity_Seconds(void)
 {
 
-    u32 temp=0;
+
 
     capacitySecond = Calculate_LungCapacity_Second();
     //这一秒和上一秒都是0
@@ -122,7 +115,7 @@ void Calculate_LungCapacity_Seconds(void)
     //这一秒是0 上一秒不是0
     else if((capacitySecond == 0)&&(capacitySecondFlag != 0))
     {
-        //capacitySeconds =0;
+        capacitySeconds =0;
         //当前秒不等于0 ，标志为1
         capacitySecondFlag=0;
 
@@ -135,8 +128,8 @@ void Calculate_LungCapacity_Seconds(void)
         capacitySecondFlag=1;
 
     }
-    temp = (u32) capacitySeconds*100;
-    printf("%lu.%lu ml\n",temp/100,temp%100);
+
+
 
 }
 
@@ -147,7 +140,7 @@ void HardWare_Init(void)
     Init_USART1();
     enableInterrupts();
     Init_ADC();
-    Timer2_Init(samplingTime);
+    Timer2_Init(5);
 }
 
 void main(void)
