@@ -2,11 +2,7 @@
 #define __MAIN_H
 
 
-// 补偿采样2秒间隔中的损失肺活量
-#define compensator 9.6
 
-//气压阈值，低于此气压都是0
-#define  pressureThreshold 5
 
 //单位时间肺活量阈值，低于此值都是0
 #define lungThreshold 58
@@ -22,8 +18,7 @@
 //测试时使用的皮管面积为30.19 mm*mm
 #define PIPESIZE 30.19
 //皮托管系数暂定是1.0，后续需要测试更改
-#define PITOT 1.99
-
+#define PITOT 1.0
 
 
 typedef struct

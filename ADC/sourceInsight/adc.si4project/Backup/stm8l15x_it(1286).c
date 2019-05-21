@@ -318,7 +318,7 @@ INTERRUPT_HANDLER(TIM2_UPD_OVF_TRG_BRK_USART2_TX_IRQHandler,19)
         ADCCount =0;
      }
 
-     ADCBuffer[ADCCount++]= GetVotage_ADC(); 
+     ADCBuffer[ADCCount++]= GetVotage_ADC();
      TIM2_ClearITPendingBit(TIM2_IT_Update); 
          
 }

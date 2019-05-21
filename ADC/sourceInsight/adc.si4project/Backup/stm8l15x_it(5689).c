@@ -308,6 +308,7 @@ INTERRUPT_HANDLER(ADC1_COMP_IRQHandler,18)
   */
 INTERRUPT_HANDLER(TIM2_UPD_OVF_TRG_BRK_USART2_TX_IRQHandler,19)
 {
+  int ret=0;
     /* In order to detect unexpected events during development,
        it is recommended to set a breakpoint on the following instruction.
     */
@@ -318,7 +319,8 @@ INTERRUPT_HANDLER(TIM2_UPD_OVF_TRG_BRK_USART2_TX_IRQHandler,19)
         ADCCount =0;
      }
 
-     ADCBuffer[ADCCount++]= GetVotage_ADC(); 
+     ADCBuffer[ADCCount++]= GetVotage_ADC();
+     ret = ADCBuffer[ADCCount-1];
      TIM2_ClearITPendingBit(TIM2_IT_Update); 
          
 }

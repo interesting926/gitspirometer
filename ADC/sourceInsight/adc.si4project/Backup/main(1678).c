@@ -32,6 +32,8 @@
 #include "tim2.h"
 
 
+
+
 //上一秒肺活量是否为零标志
 int capacitySecondFlag=0;
 //当前一秒肺活量
@@ -132,10 +134,6 @@ void Calculate_LungCapacity_Seconds(void)
         //当前秒不等于0 ，标志为1
         capacitySecondFlag=1;
 
-    }
-    if(capacitySeconds)
-    {
-        capacitySeconds +=compensator;
     }
     temp = (u32) (capacitySeconds*100);
     printf("%lu.%lu ml\n",temp/100,temp%100);

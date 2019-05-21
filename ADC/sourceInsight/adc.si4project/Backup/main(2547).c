@@ -32,6 +32,8 @@
 #include "tim2.h"
 
 
+
+
 //上一秒肺活量是否为零标志
 int capacitySecondFlag=0;
 //当前一秒肺活量
@@ -80,8 +82,8 @@ float Calculate_LungCapacity_Second(void)
        
         //计算气压,
         Capacity.airPressure =  (((float)coefficientA*ADCBuffer[i]/PRECISION ) -(float)coefficientB);
-        //标准气压计在气压低于阈值就忽略
-        if(Capacity.airPressure <pressureThreshold) 
+        //在标准气压下算出来的可能是负数
+        if(Capacity.airPressure <0.7) 
         {
             Capacity.airPressure=0;
             continue;
@@ -94,7 +96,7 @@ float Calculate_LungCapacity_Second(void)
         //累加气体流量
         Capacity.lungCapacity += Capacity.unitGasFlow;
     }  
-    //if(Capacity.lungCapacity <= lungThreshold) Capacity.lungCapacity=0;
+    if(Capacity.lungCapacity <= lungThreshold) Capacity.lungCapacity=0;
     enableInterrupts();
     return Capacity.lungCapacity;
  
@@ -133,14 +135,10 @@ void Calculate_LungCapacity_Seconds(void)
         capacitySecondFlag=1;
 
     }
-    if(capacitySeconds)
-    {
-        capacitySeconds +=compensator;
-    }
-    temp = (u32) (capacitySeconds*100);
+    temp = (u32) capacitySeconds*100;
     printf("%lu.%lu ml\n",temp/100,temp%100);
 
-}  
+}
 
 
 void HardWare_Init(void)
