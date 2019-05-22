@@ -135,7 +135,7 @@ int GetVotage_ADC(void)
     adc1_value = GetValue_ADC(20);
     //将ADC采集到的电压装换成实际电压
     Fvalue=(float)adc1_value*(3.2/4096);
-    Ivalue = (int)(Fvalue * PRECISION *10 );
+    Ivalue = (int)(Fvalue * PRECISION );
     return Ivalue;   
 }
 

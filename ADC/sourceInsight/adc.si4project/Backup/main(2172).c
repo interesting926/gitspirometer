@@ -92,7 +92,7 @@ float Calculate_LungCapacity_Second(void)
         Capacity.lungCapacity += Capacity.unitGasFlow;
     }  
 
-    Capacity.lungCapacity += (Capacity.unitGasFlow *7);
+    //Capacity.lungCapacity += (Capacity.unitGasFlow *7);
     enableInterrupts();
     return Capacity.lungCapacity;
  

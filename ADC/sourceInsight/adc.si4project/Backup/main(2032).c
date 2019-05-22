@@ -69,20 +69,21 @@ void sys_clock_init(void)
 float Calculate_LungCapacity_Second(void)
 {
     int i;
+    int ADCBuf[BUFFER_SIZE]={0};
     spirometer  Capacity={0,AIRDENSITY, PIPESIZE,PITOT,0};
     disableInterrupts();
-
+    //先把ADC的数据保存起来
+    memcpy(ADCBuf,ADCBuffer,BUFFER_SIZE);
     for(i=0;i<BUFFER_SIZE;i++)
     {       
         //计算气压,
-        Capacity.airPressure =  (((float)coefficientA*ADCBuffer[i]) -(float)(coefficientB*10*PRECISION));
+        Capacity.airPressure =  (((float)coefficientA*ADCBuffer[i]/PRECISION ) -(float)coefficientB);
         //标准气压计在气压低于阈值就忽略
         if(Capacity.airPressure <pressureThreshold) 
         {
             Capacity.airPressure=0;
             continue;
         }
-        Capacity.airPressure = (float)(Capacity.airPressure/(10*PRECISION));
     
         //计算单位时间内气体流量
         Capacity.unitGasFlow = (PITOT * (float)sqrt(2*Capacity.airPressure - (Capacity.airDensity))*PIPESIZE);        
@@ -92,7 +93,26 @@ float Calculate_LungCapacity_Second(void)
         Capacity.lungCapacity += Capacity.unitGasFlow;
     }  
 
-    Capacity.lungCapacity += (Capacity.unitGasFlow *7);
+    //补偿采样间隔中损失的肺活量
+    for(i=0;i<7;i++)
+    {
+        //计算气压,
+        Capacity.airPressure =  (((float)coefficientA*ADCBuffer[BUFFER_SIZE-1]/PRECISION ) -(float)coefficientB);
+        //标准气压计在气压低于阈值就忽略
+        if(Capacity.airPressure <pressureThreshold) 
+        {
+            Capacity.airPressure=0;
+            continue;
+        }
+    
+        //计算单位时间内气体流量
+        Capacity.unitGasFlow = (PITOT * (float)sqrt(2*Capacity.airPressure - (Capacity.airDensity))*PIPESIZE);        
+        //将计算出来的值乘以时间
+        Capacity.unitGasFlow =  (Capacity.unitGasFlow*(u32)samplingTime)/((u32)(unitTime));
+        //累加气体流量
+        Capacity.lungCapacity += Capacity.unitGasFlow;
+    }
+    //if(Capacity.lungCapacity <= lungThreshold) Capacity.lungCapacity=0;
     enableInterrupts();
     return Capacity.lungCapacity;
  
