@@ -94,7 +94,7 @@ float Calculate_LungCapacity_Second(void)
     }  
 
     //补偿采样间隔中损失的肺活量
-    for(i=0;i<7;i++)
+    for(i=0;i<6;i++)
     {
         //计算气压,
         Capacity.airPressure =  (((float)coefficientA*ADCBuffer[BUFFER_SIZE-1]/PRECISION ) -(float)coefficientB);

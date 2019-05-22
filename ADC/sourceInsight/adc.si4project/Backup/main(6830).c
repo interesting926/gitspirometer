@@ -92,26 +92,7 @@ float Calculate_LungCapacity_Second(void)
         //累加气体流量
         Capacity.lungCapacity += Capacity.unitGasFlow;
     }  
-
-    //补偿采样间隔中损失的肺活量
-    for(i=0;i<7;i++)
-    {
-        //计算气压,
-        Capacity.airPressure =  (((float)coefficientA*ADCBuffer[BUFFER_SIZE-1]/PRECISION ) -(float)coefficientB);
-        //标准气压计在气压低于阈值就忽略
-        if(Capacity.airPressure <pressureThreshold) 
-        {
-            Capacity.airPressure=0;
-            continue;
-        }
-    
-        //计算单位时间内气体流量
-        Capacity.unitGasFlow = (PITOT * (float)sqrt(2*Capacity.airPressure - (Capacity.airDensity))*PIPESIZE);        
-        //将计算出来的值乘以时间
-        Capacity.unitGasFlow =  (Capacity.unitGasFlow*(u32)samplingTime)/((u32)(unitTime));
-        //累加气体流量
-        Capacity.lungCapacity += Capacity.unitGasFlow;
-    }
+    for(i=0;i<)
     //if(Capacity.lungCapacity <= lungThreshold) Capacity.lungCapacity=0;
     enableInterrupts();
     return Capacity.lungCapacity;
@@ -153,7 +134,7 @@ void Calculate_LungCapacity_Seconds(void)
     }
     if(capacitySeconds)
     {
-        capacitySeconds +=0;
+        capacitySeconds +=compensator;
     }
     temp = (u32) (capacitySeconds*100);
     printf("%lu.%lu ml\n",temp/100,temp%100);

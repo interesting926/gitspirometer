@@ -3,7 +3,7 @@
 
 
 // 补偿采样2秒间隔中的损失肺活量
-#define compensator 10.6
+#define compensator 9.6
 
 //气压阈值，低于此气压都是0
 #define  pressureThreshold 5
